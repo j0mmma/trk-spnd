@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="UML - Subscription Tracker" id="subscription-tracker">
+    <mxGraphModel dx="1312" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- User -->
+        <mxCell id="user" value="User&#xa;- id: UUID&#xa;- name: String&#xa;- email: String&#xa;+ getActiveSubscriptions()" style="shape=swimlane;swimlaneLine=0;childLayout=stackLayout;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Subscription -->
+        <mxCell id="subscription" value="Subscription&#xa;- id: UUID&#xa;- serviceName: String&#xa;- costPerMonth: float&#xa;- startDate: Date&#xa;- endDate: Date&#xa;- status: String&#xa;+ isActive()" style="shape=swimlane;swimlaneLine=0;childLayout=stackLayout;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="40" width="200" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Service -->
+        <mxCell id="service" value="Service&#xa;- id: UUID&#xa;- name: String&#xa;- category: String&#xa;- vendor: String" style="shape=swimlane;swimlaneLine=0;childLayout=stackLayout;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="40" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- UsageLog -->
+        <mxCell id="usagelog" value="UsageLog&#xa;- id: UUID&#xa;- subscriptionId: UUID&#xa;- date: Date&#xa;- usageAmount: float&#xa;+ getDailyAverage()" style="shape=swimlane;swimlaneLine=0;childLayout=stackLayout;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="240" width="200" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Alert -->
+        <mxCell id="alert" value="Alert&#xa;- id: UUID&#xa;- message: String&#xa;- severity: String&#xa;- subscriptionId: UUID&#xa;- createdAt: Date&#xa;+ isResolved" style="shape=swimlane;swimlaneLine=0;childLayout=stackLayout;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="240" width="180" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="rel1" style="endArrow=block;dashed=0;" edge="1" parent="1" source="user" target="subscription">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" style="endArrow=block;dashed=0;" edge="1" parent="1" source="subscription" target="service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" style="endArrow=block;dashed=0;" edge="1" parent="1" source="subscription" target="usagelog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" style="endArrow=block;dashed=0;" edge="1" parent="1" source="subscription" target="alert">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
