@@ -29,6 +29,10 @@
     - view usage
     - view most used apps
     - view finance data (projected/actual spending, total monthly/yearly spending)
+4. User Management
+    - login/signup
+    - invite/remove users
+
 
 # Views
 1. Dashboard/stats
@@ -42,18 +46,23 @@
     - actual spending (from transactions)
     - 
 2. Apps
+    - list of all apps with info on them (db entity attributes)
     - App page
         - Overview
         - Pricing Plans
         - Users (with assigned pricing plans for this app)
         - Transactions
 3. Employees
+    - list of employees with info on them (db entity attributes)
     - Employee Page
         - Overview
         - Apps used
+    - invite new users
+    - change user role (admin/member)
 4. Procurement
     - Create requests for new apps 
     - Managers can create request workflows ??????
+5. Login/signup
 
 # Entities
 
@@ -68,7 +77,7 @@ App
 - owner_id FK
 - notes
 
-Pricing_plan
+PricingPlan
 - id
 - name
 - num_of_licences
@@ -86,15 +95,15 @@ Transaction
 - amount
 - app_id FK (one to many)
 
-App_category
+AppCategory
 - id
 - name
 
-App_status (Active, Calceled, On hold, Not approved, Needs review)
+AppStatus (Active, Calceled, On hold, Not approved, Needs review)
 - id
 - name
 
-App_users (many to many)
+AppUsers (many to many)
 - id
 - app_id FK
 - user_id FK
@@ -110,11 +119,11 @@ User
 - role_id
 - status_id
 
-User_role (Member, Admin)
+UserRole (Member, Admin)
 - id
 - name
 
-User_status (Active, Inactive)
+UserStatus (Active, Inactive)
 - id
 - name
 
@@ -122,20 +131,21 @@ Department
 - id
 - name
 
-Procurement_request
+ProcurementRequest
 - id
 - description
-- app_name
+- app_id FK NULL
 - type_id FK
 - deadline_datetime
-- approver_id FK user
+- date_created
+- approver_id FK user   
 - created_by_id FK user
-- 
+- status_id FK request_status
 
-Request_type (New Purchase, Upgrade, Additional licences)
+RequestType (New Purchase, Upgrade, Additional licences)
 - id
 - name
 
-Request_status (New, In Progress, Approved, Calceled, Complete)
+RequestStatus (New, In Progress, Approved, Calceled, Complete)
 - id
 - name
