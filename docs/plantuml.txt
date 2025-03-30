@@ -1,0 +1,159 @@
+@startuml
+
+' -------------------------
+' Entities
+' -------------------------
+
+class User {
+    +int id
+    +String email
+    +String password
+    +String fname
+    +String lname
+    +int department_id
+    +int role_id
+    +int status_id
+    +getUserById()
+    +getUsers()
+}
+
+class App {
+    +int id
+    +String name
+    +int category_id
+    +int status_id
+    +String renewal_date
+    +int owner_id
+    +String notes
+    +getAppById()
+    +getApps()
+}
+
+class ProcurementRequest {
+    +int id
+    +String description
+    +int app_id
+    +int type_id
+    +datetime deadline_datetime
+    +datetime date_created
+    +int approver_id
+    +int created_by_id
+    +int status_id
+    +getRequestById()
+    +getRequests()
+}
+
+class Transaction {
+    +int id
+    +String number
+    +String description
+    +datetime datetime
+    +String status
+    +decimal amount
+    +int app_id
+    +getTransactionById()
+    +getTransactions()
+}
+
+class RequestType {
+    +int id
+    +String name
+}
+
+class RequestStatus {
+    +int id
+    +String name
+}
+
+class UserRole {
+    +int id
+    +String name
+}
+
+class UserStatus {
+    +int id
+    +String name
+}
+
+class Department {
+    +int id
+    +String name
+}
+
+class AppCategory {
+    +int id
+    +String name
+}
+
+class AppStatus {
+    +int id
+    +String name
+}
+
+' -------------------------
+' Controllers
+' -------------------------
+
+class UserController {
+    +createUser()
+    +getUser()
+    +updateUser()
+    +deleteUser()
+}
+
+class AppController {
+    +createApp()
+    +getApp()
+    +updateApp()
+    +deleteApp()
+}
+
+class ProcurementController {
+    +createProcurementRequest()
+    +getProcurementRequest()
+    +updateProcurementRequest()
+    +approveProcurementRequest()
+    +cancelProcurementRequest()
+}
+
+class TransactionController {
+    +createTransaction()
+    +getTransaction()
+    +updateTransaction()
+    +deleteTransaction()
+}
+
+' -------------------------
+' Relationships
+' -------------------------
+
+UserController --> User : uses
+AppController --> App : uses
+AppController --> User : uses
+ProcurementController --> ProcurementRequest : uses
+ProcurementController --> RequestType : uses
+ProcurementController --> RequestStatus : uses
+ProcurementController --> User : uses
+TransactionController --> Transaction : uses
+
+' -------------------------
+' Foreign Key Relationships
+' -------------------------
+
+User --> Department : belongs_to
+User --> UserRole : has
+User --> UserStatus : has
+
+App --> AppCategory : belongs_to
+App --> AppStatus : has
+App --> User : belongs_to (owner)
+
+ProcurementRequest --> App : has
+ProcurementRequest --> RequestType : has
+ProcurementRequest --> RequestStatus : has
+ProcurementRequest --> User : belongs_to (created_by)
+ProcurementRequest --> User : belongs_to (approver)
+
+Transaction --> App : belongs_to
+
+@enduml

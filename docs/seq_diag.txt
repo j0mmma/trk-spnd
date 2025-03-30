@@ -1,0 +1,29 @@
+https://sequencediagram.org/
+
+Title: Ведення обліку сервісів
+
+Адміністратор -> AppController: Створити новий сервіс
+AppController -> MySQL DB: Зберегти інформацію про сервіс
+MySQL DB --> AppController: Підтвердження створення
+AppController --> Адміністратор: Підтвердження створення сервісу
+
+Адміністратор -> AppController: Заповнити базову інформацію
+AppController -> MySQL DB: Оновити інформацію
+AppController --> Адміністратор: Підтвердження заповнення базової інформації
+
+Адміністратор -> AppController: Створити тарифний план
+AppController -> MySQL DB: Зберегти тарифний план
+MySQL DB --> AppController: Підтвердження створення
+AppController --> Адміністратор: Підтвердження створення тарифного плану
+
+Адміністратор -> AppController: Призначити ліцензії користувачам
+AppController -> MySQL DB: Зберегти ліцензії
+MySQL DB --> AppController: Підтвердження призначення
+AppController --> Адміністратор: Підтвердження призначення ліцензій
+
+Адміністратор -> TransactionController: Додати транзакцію
+TransactionController -> MySQL DB: Зберегти транзакцію
+MySQL DB --> TransactionController: Підтвердження збереження
+TransactionController --> Адміністратор: Підтвердження додавання транзакції
+
+

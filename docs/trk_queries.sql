@@ -77,11 +77,6 @@ END //
 DELIMITER ;
 
 
-
-
-
--- prac3 3 selects
-
 -- Business Function: User views apps they’re assigned to
 SELECT 
   u.email,
@@ -92,7 +87,7 @@ FROM app_users au
 JOIN user u ON au.user_id = u.id
 JOIN app a ON au.app_id = a.id
 JOIN pricing_plan pp ON au.app_pricing_plan_id = pp.id
-WHERE u.id = 2; -- replace with logged-in user ID
+WHERE u.id = 2;
 
 
 -- Business Function: Approver views pending procurement requests
@@ -109,7 +104,7 @@ JOIN app a ON pr.app_id = a.id
 JOIN request_type rt ON pr.type_id = rt.id
 JOIN user u ON pr.created_by_id = u.id
 WHERE pr.status_id = (SELECT id FROM request_status WHERE name = 'New')
-  AND pr.approver_id = 1; -- replace with logged-in approver ID
+  AND pr.approver_id = 1;
 
 
 -- Business Function: Procurement manager views all pending requests across the company
