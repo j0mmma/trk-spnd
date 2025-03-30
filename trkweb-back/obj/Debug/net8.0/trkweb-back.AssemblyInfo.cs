@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("trkweb-back")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10fbbf51eafa9aa4bf96ac2d2569eec1eec912ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7848b460749bdd2ead06514ed3aeeaa5965db0f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("trkweb-back")]
 [assembly: System.Reflection.AssemblyTitleAttribute("trkweb-back")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
