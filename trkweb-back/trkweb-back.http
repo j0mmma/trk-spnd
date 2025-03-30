@@ -1,6 +1,0 @@
-@trkweb_back_HostAddress = http://localhost:5209
-
-GET {{trkweb_back_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

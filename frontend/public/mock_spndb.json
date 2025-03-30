@@ -1,0 +1,697 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "alice@example.com",
+      "fname": "Alice",
+      "lname": "Nguyen",
+      "role": "Admin",
+      "department": "Finance",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "email": "bob@example.com",
+      "fname": "Bob",
+      "lname": "Smith",
+      "role": "Member",
+      "department": "IT",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "email": "carla@example.com",
+      "fname": "Carla",
+      "lname": "Jones",
+      "role": "Member",
+      "department": "HR",
+      "status": "Active"
+    },
+    {
+      "id": 4,
+      "email": "dan@example.com",
+      "fname": "Dan",
+      "lname": "Lee",
+      "role": "Member",
+      "department": "Finance",
+      "status": "Active"
+    },
+    {
+      "id": 5,
+      "email": "eva@example.com",
+      "fname": "Eva",
+      "lname": "Kim",
+      "role": "Member",
+      "department": "IT",
+      "status": "Active"
+    },
+    {
+      "id": 6,
+      "email": "fred@example.com",
+      "fname": "Fred",
+      "lname": "Taylor",
+      "role": "Member",
+      "department": "Procurement",
+      "status": "Active"
+    },
+    {
+      "id": 7,
+      "email": "gina@example.com",
+      "fname": "Gina",
+      "lname": "Miller",
+      "role": "Member",
+      "department": "HR",
+      "status": "Active"
+    },
+    {
+      "id": 8,
+      "email": "hank@example.com",
+      "fname": "Hank",
+      "lname": "Adams",
+      "role": "Member",
+      "department": "Procurement",
+      "status": "Active"
+    },
+    {
+      "id": 9,
+      "email": "ivy@example.com",
+      "fname": "Ivy",
+      "lname": "Clark",
+      "role": "Member",
+      "department": "Finance",
+      "status": "Active"
+    },
+    {
+      "id": 10,
+      "email": "jack@example.com",
+      "fname": "Jack",
+      "lname": "Wong",
+      "role": "Member",
+      "department": "IT",
+      "status": "Active"
+    }
+  ],
+  "apps": [
+    {
+      "id": 1,
+      "name": "Slack",
+      "category": "Security",
+      "status": "Active",
+      "renewal_date": "2025-12-24",
+      "owner_id": 1,
+      "notes": "Slack description",
+      "pricing_plan": {
+        "id": 1,
+        "name": "Slack Plan",
+        "num_of_licences": 10,
+        "price_per_licence": 16.9,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Zoom",
+      "category": "Dev Tools",
+      "status": "Active",
+      "renewal_date": "2025-10-10",
+      "owner_id": 2,
+      "notes": "Zoom description",
+      "pricing_plan": {
+        "id": 2,
+        "name": "Zoom Plan",
+        "num_of_licences": 4,
+        "price_per_licence": 21.2,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Notion",
+      "category": "Dev Tools",
+      "status": "Active",
+      "renewal_date": "2025-12-08",
+      "owner_id": 3,
+      "notes": "Notion description",
+      "pricing_plan": {
+        "id": 3,
+        "name": "Notion Plan",
+        "num_of_licences": 6,
+        "price_per_licence": 21.3,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Okta",
+      "category": "Collaboration",
+      "status": "Canceled",
+      "renewal_date": "2025-05-27",
+      "owner_id": 4,
+      "notes": "Okta description",
+      "pricing_plan": {
+        "id": 4,
+        "name": "Okta Plan",
+        "num_of_licences": 10,
+        "price_per_licence": 24.56,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 5,
+      "name": "1Password",
+      "category": "Collaboration",
+      "status": "Active",
+      "renewal_date": "2025-12-01",
+      "owner_id": 5,
+      "notes": "1Password description",
+      "pricing_plan": {
+        "id": 5,
+        "name": "1Password Plan",
+        "num_of_licences": 8,
+        "price_per_licence": 20.26,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 6,
+      "name": "HubSpot",
+      "category": "CRM",
+      "status": "Needs Review",
+      "renewal_date": "2025-10-25",
+      "owner_id": 6,
+      "notes": "HubSpot description",
+      "pricing_plan": {
+        "id": 6,
+        "name": "HubSpot Plan",
+        "num_of_licences": 10,
+        "price_per_licence": 22.59,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Salesforce",
+      "category": "CRM",
+      "status": "Active",
+      "renewal_date": "2025-12-09",
+      "owner_id": 7,
+      "notes": "Salesforce description",
+      "pricing_plan": {
+        "id": 7,
+        "name": "Salesforce Plan",
+        "num_of_licences": 8,
+        "price_per_licence": 17.48,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 8,
+      "name": "GitHub",
+      "category": "Dev Tools",
+      "status": "Active",
+      "renewal_date": "2025-08-21",
+      "owner_id": 8,
+      "notes": "GitHub description",
+      "pricing_plan": {
+        "id": 8,
+        "name": "GitHub Plan",
+        "num_of_licences": 7,
+        "price_per_licence": 15.51,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Jira",
+      "category": "Security",
+      "status": "Active",
+      "renewal_date": "2025-07-03",
+      "owner_id": 9,
+      "notes": "Jira description",
+      "pricing_plan": {
+        "id": 9,
+        "name": "Jira Plan",
+        "num_of_licences": 8,
+        "price_per_licence": 15.54,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Figma",
+      "category": "Dev Tools",
+      "status": "Active",
+      "renewal_date": "2025-10-07",
+      "owner_id": 10,
+      "notes": "Figma description",
+      "pricing_plan": {
+        "id": 10,
+        "name": "Figma Plan",
+        "num_of_licences": 6,
+        "price_per_licence": 16.71,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Confluence",
+      "category": "Security",
+      "status": "Active",
+      "renewal_date": "2025-07-13",
+      "owner_id": 10,
+      "notes": "Confluence description",
+      "pricing_plan": {
+        "id": 11,
+        "name": "Confluence Plan",
+        "num_of_licences": 8,
+        "price_per_licence": 13.75,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Trello",
+      "category": "Security",
+      "status": "Active",
+      "renewal_date": "2025-08-12",
+      "owner_id": 6,
+      "notes": "Trello description",
+      "pricing_plan": {
+        "id": 12,
+        "name": "Trello Plan",
+        "num_of_licences": 7,
+        "price_per_licence": 15.75,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Asana",
+      "category": "Dev Tools",
+      "status": "Active",
+      "renewal_date": "2025-09-10",
+      "owner_id": 7,
+      "notes": "Asana description",
+      "pricing_plan": {
+        "id": 13,
+        "name": "Asana Plan",
+        "num_of_licences": 10,
+        "price_per_licence": 7.24,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 14,
+      "name": "LastPass",
+      "category": "Dev Tools",
+      "status": "Active",
+      "renewal_date": "2025-09-21",
+      "owner_id": 7,
+      "notes": "LastPass description",
+      "pricing_plan": {
+        "id": 14,
+        "name": "LastPass Plan",
+        "num_of_licences": 9,
+        "price_per_licence": 7.62,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Mailchimp",
+      "category": "Dev Tools",
+      "status": "Active",
+      "renewal_date": "2025-05-14",
+      "owner_id": 10,
+      "notes": "Mailchimp description",
+      "pricing_plan": {
+        "id": 15,
+        "name": "Mailchimp Plan",
+        "num_of_licences": 9,
+        "price_per_licence": 5.94,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Zendesk",
+      "category": "Collaboration",
+      "status": "Active",
+      "renewal_date": "2025-05-22",
+      "owner_id": 2,
+      "notes": "Zendesk description",
+      "pricing_plan": {
+        "id": 16,
+        "name": "Zendesk Plan",
+        "num_of_licences": 6,
+        "price_per_licence": 8.49,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Bitbucket",
+      "category": "Dev Tools",
+      "status": "Needs Review",
+      "renewal_date": "2025-05-27",
+      "owner_id": 3,
+      "notes": "Bitbucket description",
+      "pricing_plan": {
+        "id": 17,
+        "name": "Bitbucket Plan",
+        "num_of_licences": 7,
+        "price_per_licence": 23.18,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 18,
+      "name": "CircleCI",
+      "category": "CRM",
+      "status": "Needs Review",
+      "renewal_date": "2025-05-18",
+      "owner_id": 3,
+      "notes": "CircleCI description",
+      "pricing_plan": {
+        "id": 18,
+        "name": "CircleCI Plan",
+        "num_of_licences": 7,
+        "price_per_licence": 10.76,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 19,
+      "name": "VS Code",
+      "category": "CRM",
+      "status": "Active",
+      "renewal_date": "2025-11-13",
+      "owner_id": 4,
+      "notes": "VS Code description",
+      "pricing_plan": {
+        "id": 19,
+        "name": "VS Code Plan",
+        "num_of_licences": 6,
+        "price_per_licence": 22.78,
+        "billing_cycle": "Monthly"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Google Workspace",
+      "category": "Collaboration",
+      "status": "Active",
+      "renewal_date": "2025-06-04",
+      "owner_id": 9,
+      "notes": "Google Workspace description",
+      "pricing_plan": {
+        "id": 20,
+        "name": "Google Workspace Plan",
+        "num_of_licences": 3,
+        "price_per_licence": 23.37,
+        "billing_cycle": "Monthly"
+      }
+    }
+  ],
+  "procurement_requests": [
+    {
+      "id": 1,
+      "description": "Need Slack licenses for new team",
+      "app_id": 1,
+      "type": "New Purchase",
+      "status": "New",
+      "deadline": "2025-04-01T00:00:00",
+      "created_by_id": 2,
+      "approver_id": 1
+    },
+    {
+      "id": 2,
+      "description": "Upgrade Zoom plan for webinars",
+      "app_id": 2,
+      "type": "Upgrade",
+      "status": "In Progress",
+      "deadline": "2025-04-02T00:00:00",
+      "created_by_id": 3,
+      "approver_id": 2
+    },
+    {
+      "id": 3,
+      "description": "Requesting extra seats for GitHub",
+      "app_id": 8,
+      "type": "Additional licences",
+      "status": "New",
+      "deadline": "2025-04-03T00:00:00",
+      "created_by_id": 5,
+      "approver_id": 8
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "number": "TX001",
+      "description": "Payment for Slack",
+      "datetime": "2025-03-01T10:00:00",
+      "status": "Failed",
+      "amount": 89.9,
+      "app_id": 1
+    },
+    {
+      "id": 2,
+      "number": "TX002",
+      "description": "Payment for Zoom",
+      "datetime": "2025-03-02T10:00:00",
+      "status": "Pending",
+      "amount": 96.47,
+      "app_id": 2
+    },
+    {
+      "id": 3,
+      "number": "TX003",
+      "description": "Payment for Notion",
+      "datetime": "2025-03-03T10:00:00",
+      "status": "Failed",
+      "amount": 78.38,
+      "app_id": 3
+    },
+    {
+      "id": 4,
+      "number": "TX004",
+      "description": "Payment for Okta",
+      "datetime": "2025-03-04T10:00:00",
+      "status": "Failed",
+      "amount": 65.76,
+      "app_id": 4
+    },
+    {
+      "id": 5,
+      "number": "TX005",
+      "description": "Payment for 1Password",
+      "datetime": "2025-03-05T10:00:00",
+      "status": "Pending",
+      "amount": 50.16,
+      "app_id": 5
+    }
+  ],
+  "app_assignments": [
+    {
+      "app_id": 1,
+      "user_id": 7,
+      "pricing_plan_id": 1
+    },
+    {
+      "app_id": 1,
+      "user_id": 3,
+      "pricing_plan_id": 1
+    },
+    {
+      "app_id": 2,
+      "user_id": 9,
+      "pricing_plan_id": 2
+    },
+    {
+      "app_id": 2,
+      "user_id": 5,
+      "pricing_plan_id": 2
+    },
+    {
+      "app_id": 3,
+      "user_id": 5,
+      "pricing_plan_id": 3
+    },
+    {
+      "app_id": 3,
+      "user_id": 3,
+      "pricing_plan_id": 3
+    },
+    {
+      "app_id": 4,
+      "user_id": 1,
+      "pricing_plan_id": 4
+    },
+    {
+      "app_id": 4,
+      "user_id": 4,
+      "pricing_plan_id": 4
+    },
+    {
+      "app_id": 5,
+      "user_id": 7,
+      "pricing_plan_id": 5
+    },
+    {
+      "app_id": 5,
+      "user_id": 9,
+      "pricing_plan_id": 5
+    },
+    {
+      "app_id": 6,
+      "user_id": 5,
+      "pricing_plan_id": 6
+    },
+    {
+      "app_id": 6,
+      "user_id": 7,
+      "pricing_plan_id": 6
+    },
+    {
+      "app_id": 7,
+      "user_id": 10,
+      "pricing_plan_id": 7
+    },
+    {
+      "app_id": 7,
+      "user_id": 2,
+      "pricing_plan_id": 7
+    },
+    {
+      "app_id": 8,
+      "user_id": 8,
+      "pricing_plan_id": 8
+    },
+    {
+      "app_id": 8,
+      "user_id": 7,
+      "pricing_plan_id": 8
+    },
+    {
+      "app_id": 9,
+      "user_id": 5,
+      "pricing_plan_id": 9
+    },
+    {
+      "app_id": 9,
+      "user_id": 9,
+      "pricing_plan_id": 9
+    },
+    {
+      "app_id": 10,
+      "user_id": 1,
+      "pricing_plan_id": 10
+    },
+    {
+      "app_id": 10,
+      "user_id": 8,
+      "pricing_plan_id": 10
+    },
+    {
+      "app_id": 11,
+      "user_id": 4,
+      "pricing_plan_id": 11
+    },
+    {
+      "app_id": 11,
+      "user_id": 2,
+      "pricing_plan_id": 11
+    },
+    {
+      "app_id": 12,
+      "user_id": 2,
+      "pricing_plan_id": 12
+    },
+    {
+      "app_id": 12,
+      "user_id": 10,
+      "pricing_plan_id": 12
+    },
+    {
+      "app_id": 13,
+      "user_id": 3,
+      "pricing_plan_id": 13
+    },
+    {
+      "app_id": 13,
+      "user_id": 2,
+      "pricing_plan_id": 13
+    },
+    {
+      "app_id": 14,
+      "user_id": 1,
+      "pricing_plan_id": 14
+    },
+    {
+      "app_id": 14,
+      "user_id": 7,
+      "pricing_plan_id": 14
+    },
+    {
+      "app_id": 15,
+      "user_id": 1,
+      "pricing_plan_id": 15
+    },
+    {
+      "app_id": 15,
+      "user_id": 3,
+      "pricing_plan_id": 15
+    },
+    {
+      "app_id": 16,
+      "user_id": 10,
+      "pricing_plan_id": 16
+    },
+    {
+      "app_id": 16,
+      "user_id": 5,
+      "pricing_plan_id": 16
+    },
+    {
+      "app_id": 17,
+      "user_id": 9,
+      "pricing_plan_id": 17
+    },
+    {
+      "app_id": 17,
+      "user_id": 5,
+      "pricing_plan_id": 17
+    },
+    {
+      "app_id": 18,
+      "user_id": 9,
+      "pricing_plan_id": 18
+    },
+    {
+      "app_id": 18,
+      "user_id": 1,
+      "pricing_plan_id": 18
+    },
+    {
+      "app_id": 19,
+      "user_id": 9,
+      "pricing_plan_id": 19
+    },
+    {
+      "app_id": 19,
+      "user_id": 5,
+      "pricing_plan_id": 19
+    },
+    {
+      "app_id": 20,
+      "user_id": 8,
+      "pricing_plan_id": 20
+    },
+    {
+      "app_id": 20,
+      "user_id": 2,
+      "pricing_plan_id": 20
+    }
+  ]
+}

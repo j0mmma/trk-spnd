@@ -54,7 +54,7 @@ DELIMITER ;
 DELIMITER //
 
 CREATE PROCEDURE CreateProcurementRequest (
-  IN p_description TEXT,
+  IN p_description TEXT,	
   IN p_app_id INT,
   IN p_type_id INT,
   IN p_deadline DATETIME,
